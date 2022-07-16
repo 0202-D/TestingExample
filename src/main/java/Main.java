@@ -11,10 +11,13 @@ public class Main {
     }
 
     public static int calculatingTheNumberOfLargeSizedBooks(int[] arr, int newBookSize) {
+        if (newBookSize < 0) {
+            return -1;
+        }
         if (newBookSize < arr[0]) {
             return arr.length;
         }
-        if (newBookSize >= arr[arr.length-1]) {
+        if (newBookSize >= arr[arr.length - 1]) {
             return 0;
         }
         int left = 0;
